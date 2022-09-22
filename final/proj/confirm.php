@@ -18,6 +18,8 @@
 			if(!$res3)
 				echo "Error: ".mysqli_error($conn)."<br>";
 		}
+		unset($_SESSION["total"]);
+		unset($_SESSION["new_values"]);
 		header("Location: userview.php");
 	}
 	else echo "Error: ".mysqli_error($conn);
